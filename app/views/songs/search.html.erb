@@ -3,3 +3,12 @@
     <%= text_field_tag(:q) %>
     <%= submit_tag("Search") %>
 <% end %>
+
+<% if @results.present? %>
+  <h1>Songs Found</h1>
+  <ul>
+    <% @results.each do |song| %>
+      <li><%= song["name"] %></li>
+    <% end %>
+  </ul>
+<% end %>
