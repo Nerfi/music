@@ -5,7 +5,7 @@ class Meetup
   attr_reader :options
 
   def initialize
-    api_key  = ENV{MEET_UP_API_KEY}
+    api_key  = ENV['MEET_UP_API_KEY']
     @options = {
       query: {
         key: api_key,
